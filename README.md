@@ -22,6 +22,15 @@ $ source <env_name>/bin/activate
 (<env_name>)$ pip install -r requirements.txt
 ```
 
+### Running the comparison
+Activate the virtual environment, edit the config file and run the program. 
+You can specify a couple of parameters:
+- -l LOGFILE or --log LOGFILE : store all the progress information and differences in the file named LOGFILE
+- -c CONFIGFILE or --config CONFIGFILE: read the connection details from the JSON file named CONFIGFILE
+
+If you don't specify a config file, it will try to load `comparadb.conf`
+
+
 ### Risks
 
 I've created this script to detect obvious differences between the databases in two servers. 
