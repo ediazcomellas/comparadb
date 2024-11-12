@@ -22,7 +22,15 @@ $ source <env_name>/bin/activate
 (<env_name>)$ pip install -r requirements.txt
 ```
 
+### Configuration
+
+To configure de connection details to both servers, please edit the file `comparadb.conf`
+and set the appropriated values. If you want to leave the output in a file instead of STDOUT, you can 
+specify the logfile in the config or use the --log command line parameter. 
+
+
 ### Running the comparison
+
 Activate the virtual environment, edit the config file and run the program. 
 You can specify a couple of parameters:
 - -l LOGFILE or --log LOGFILE : store all the progress information and differences in the file named LOGFILE
@@ -30,6 +38,15 @@ You can specify a couple of parameters:
 
 If you don't specify a config file, it will try to load `comparadb.conf`
 
+Please note that the command line parameters take precedence over the config file.
+
+
+To activate the virtualenv and run the program you can do:
+
+```
+$ source <env_name>/bin/activate
+(<env_name>)$ python comparadb.py --config myconfig.conf
+```
 
 ### Risks
 
